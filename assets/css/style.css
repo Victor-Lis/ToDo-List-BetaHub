@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Ga+Maamli&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  font-family: "Inter", sans-serif;
+}
+
+:root{
+  --background-primary: #F4F5FB;
+  --background-secondary: #FFF;
+
+  --color-brand: #CA3884;
+  --color-brand-hover: #A52C6B;
+  --color-danger: #C93847;
+
+  --content-primary: #080B12;
+  --content-secondary: #374151;
+  --content-tertiary: #9CA3AF;
+  --always-white: #FFF;
+
+  --border-primary: #D1D5DB;
+  --border-hover: #B9C2D0;
+}
+
+body {
+  padding: 0 15px;
+  padding-bottom: 5svh;
+  min-height: 95svh;
+
+  background-color: var(--background-primary);
+
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}

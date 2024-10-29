@@ -1,0 +1,54 @@
+.form-create {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 0px 15px;
+}
+
+.form-create input {
+  border: 3px #d1d5db solid;
+  border-radius: 10px;
+
+  flex: 2;
+  padding: 12px 15px;
+
+  &::placeholder {
+    color: #9ca3af;
+
+    font-size: 16px;
+    /* font-weight: 600; */
+  }
+
+  &:hover {
+    border: 3px #b9c2d0 solid;
+
+    transition: 0.25s;
+  }
+
+  &:active {
+    border: 3px #ca3884 solid;
+
+    transition: 0.25s;
+  }
+}
+
+.form-create button {
+  background-color: #ca3884;
+  color: #ffffff;
+
+  border-radius: 10px;
+
+  width: 140px;
+  padding: 12px 15px;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: #a52c6b;
+
+    transition: 0.25s;
+  }
+}

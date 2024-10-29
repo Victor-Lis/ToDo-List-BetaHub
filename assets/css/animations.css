@@ -1,0 +1,119 @@
+@keyframes check-animation {
+  0% {
+    scale: 0;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+.rotate-45deg {
+  &::before {
+    content: "";
+
+    border: none;
+
+    z-index: 1;
+    width: 100%;
+    height: 2px;
+
+    border-radius: 100px;
+
+    background-color: #c93847;
+    /* background: url("./assets/checked.svg"); */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+
+    transform: rotate(45deg);
+
+    animation: rotate-45deg .25s normal ease-in;
+  }
+
+  &::after {
+    content: "";
+
+    border: none;
+
+    z-index: 1;
+    width: 2px;
+    height: 100%;
+
+    border-radius: 100px;
+
+    background-color: #c93847;
+    /* background: url("./assets/checked.svg"); */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+
+    transform: rotate(45deg);
+
+    animation: rotate-45deg .25s normal ease-in;
+  }
+}
+
+@keyframes rotate-45deg {
+  0% {
+    scale: 0;
+    transform: rotate(0deg);
+  }
+  50% {
+    scale: 1;
+    transform: rotate(45deg);
+  }
+  100% {
+    scale: 1.25;
+  }
+}
+
+.delete-alert {
+  scale: 0;
+
+  transition: 0.25s;
+  animation: 2s delete-alert ease-in;
+}
+
+@keyframes delete-alert {
+  0% {
+    scale: 1;
+    transform: rotate(540deg);
+  }
+  25% {
+    transform: rotate(515deg);
+  }
+  50% {
+    scale: 1.5;
+    transform: rotate(360deg);
+  }
+  100% {
+    scale: 0;
+    transform: rotate(0deg);
+  }
+}
+
+.alert-vibrate {
+  transition: 0.25s;
+  animation: .2s alert-vibrate ease-in;
+}
+
+@keyframes alert-vibrate {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-1deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(1deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+

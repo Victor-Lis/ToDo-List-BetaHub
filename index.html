@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <link rel="stylesheet" href="./assets/css/header.css" />
+
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/form-create.css" />
+    <link rel="stylesheet" href="./assets/css/to-dos.css" />
+
+    <link rel="stylesheet" href="./assets/css/alert.css" />
+
+    <link rel="stylesheet" href="./assets/css/media.css" />
+    <link rel="stylesheet" href="./assets/css/animations.css" />
+
+    <script src="./assets/js/script.js" defer></script>
+
+    <title>To-Do List</title>
+  </head>
+  <body>
+    <header>
+      <img src="./assets/images/logo.svg" alt="Logo" />
+    </header>
+    <main>
+      <h2>Compras da Semana</h2>
+      <form class="form-create">
+        <input type="text" placeholder="Adicionar um novo item"/>
+        <button>Adicionar Item</button>
+      </form>
+      <section class="to-dos">
+      </section>
+      <section class="alert alert-checked alert-hidden">
+        <img src="./assets/images/checked.svg" alt="Checado" />
+        <p>Um item foi finalizado!</p>
+        <button onclick="toggleAlert({close: true, alert: 'check'})"><img src="./assets/images/x.svg" alt="X" /></button>
+      </section>
+      <section class="alert alert-delete alert-hidden">
+        <img src="./assets/images/warning-circle.svg" alt="Alerta" />
+        <p>O item foi removido da lista</p>
+        <button onclick="toggleAlert({close: true, alert: 'delete'})"><img src="./assets/images/x.svg" alt="X" /></button>
+      </section>
+    </main>
+  </body>
+</html>

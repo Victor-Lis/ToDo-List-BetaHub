@@ -1,0 +1,88 @@
+.to-dos {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem 0;
+}
+
+.to-dos > fieldset {
+  border-radius: 10px;
+
+  background-color: #ffffff;
+
+  padding: 1rem;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  gap: 0 10px;
+}
+
+.to-dos > fieldset > input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  border-radius: 35%; /* For a perfectly round checkbox */
+  appearance: none; /* Remove default browser styling */
+  background-color: #fff;
+  border: 2px solid #ccc;
+
+  position: relative;
+
+  cursor: pointer;
+
+  &:hover {
+    border: 2px solid #b9c2d0;
+    transition: 0.25s;
+  }
+
+  &:checked {
+    border: none;
+
+    accent-color: #fff;
+    border: none;
+    background-color: #a52c6b;
+    transition: 0.25s;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before {
+      content: "";
+
+      border: none;
+
+      z-index: 1;
+      width: 70%;
+      height: 70%;
+
+      background-color: #a52c6b;
+      background: url("../images/checked.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: absolute;
+
+      animation: check-animation 0.2s normal ease-in;
+    }
+  }
+}
+
+.to-dos > fieldset > button {
+  background-color: #fff;
+
+  cursor: pointer;
+
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.to-dos > fieldset > p {
+  flex: 1;
+}

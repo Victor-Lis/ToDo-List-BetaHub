@@ -1,0 +1,39 @@
+.alert {
+  display: flex;
+
+  border-radius: 10px;
+
+  color: #ffffff;
+
+  padding: 1rem;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  gap: 0 10px;
+}
+
+.alert-checked {
+  background-color: #38c942;
+  > button{
+    background-color: #38c942;
+    cursor: pointer;
+  } 
+}
+
+.alert-delete {
+  background-color: #c93847;
+  > button{
+    background-color: #c93847;
+    cursor: pointer;
+  } 
+}
+
+.alert > p {
+  flex: 1;
+}
+
+.alert-hidden {
+  display: none;
+}
