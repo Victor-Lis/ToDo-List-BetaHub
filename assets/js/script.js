@@ -8,7 +8,7 @@ const todosHtml = document.querySelector(".to-dos")
 const alertCheckedHtml = document.querySelector(".alert-checked")
 const alertDeleteHtml = document.querySelector(".alert-delete")
 
-const todos = []
+const todos = JSON.parse(localStorage.getItem("to-dos")) || []
 
 document.onload = reloadTodos({ vibrate: false })
 
@@ -23,6 +23,7 @@ createForm.onsubmit = (e) => {
   })
 
   createFormInput.value = ""
+  updateLocalStorage()
   reloadTodos({ vibrate: false })
 }
 
@@ -38,6 +39,7 @@ function checkTodo({ index }) {
   if (todo.checked) toggleAlert({ close: true, alert: 'checked' })
   toggleAlert({ close: true, alert: 'delete' })
 
+  updateLocalStorage()
   reloadTodos({ vibrate: true })
 }
 
@@ -47,6 +49,7 @@ function deleteTodo({ index }) {
   } catch { } finally {
     setTimeout(() => {
       todos.splice(index, 1)
+      updateLocalStorage()
       reloadTodos({ vibrate: true })
       toggleAlert({ close: false, alert: 'delete' })
       toggleAlert({ close: true, alert: 'checked' })
@@ -98,3 +101,5 @@ function reloadTodos({ vibrate }) {
     `
   })
 }
+
+const updateLocalStorage = () => localStorage.setItem("to-dos", JSON.stringify(todos))
